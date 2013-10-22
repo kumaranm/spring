@@ -1,8 +1,9 @@
 <html>
 <head>
-    <title>Spring 3.0 MVC Series: Index - ViralPatel.net</title>
+    <title>Spring 3.0 MVC Series</title>
 </head>
 <body>
     <a href="hello.html">Say Hello</a>
+    <a href="contacts.html">Add contact</a>
 </body>
 </html>
