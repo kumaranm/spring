@@ -27,7 +27,9 @@ public class ContactController
 	@RequestMapping("/contacts")
 	public ModelAndView showContacts()
 	{
-
+		/*
+		 * The spring framework expects an object with name command if you are using <form:form> in your JSP file.
+		 */
 		return new ModelAndView("contact", "command", new Contact());
 	}
 }
