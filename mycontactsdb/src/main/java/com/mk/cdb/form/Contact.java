@@ -24,7 +24,7 @@ public class Contact
 	@Column(name = "EMAIL")
 	private String email;
 
-	@Column(name = "MOBILE")
+	@Column(name = "TELEPHONE")
 	private String mobile;
 
 	public Integer getId()

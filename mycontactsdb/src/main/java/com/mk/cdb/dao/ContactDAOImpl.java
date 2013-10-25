@@ -2,6 +2,8 @@ package com.mk.cdb.dao;
 
 import java.util.List;
 
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.mk.cdb.form.Contact;
@@ -10,25 +12,29 @@ import com.mk.cdb.form.Contact;
 public class ContactDAOImpl implements ContactDAO
 {
 
+	@Autowired
+	private SessionFactory sessionFactory;
+
 	@Override
 	public void addContact(Contact contact)
 	{
-		// TODO Auto-generated method stub
-		
+		sessionFactory.getCurrentSession().save(contact);
 	}
 
 	@Override
 	public List<Contact> listContacts()
 	{
-		// TODO Auto-generated method stub
-		return null;
+		return (List<Contact>)sessionFactory.getCurrentSession().createQuery("from Contact").list();
 	}
 
 	@Override
-	public void removeContact(Integer Id)
+	public void removeContact(Integer id)
 	{
-		// TODO Auto-generated method stub
-		
-	}
+		Contact contact = (Contact) sessionFactory.getCurrentSession().load(Contact.class, id);
+		if (null != contact)
+		{
+			sessionFactory.getCurrentSession().delete(contact);
+		}
 
+	}
 }
