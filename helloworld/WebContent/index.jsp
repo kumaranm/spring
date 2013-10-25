@@ -5,5 +5,6 @@
 <body>
     <a href="hello.html">Say Hello</a>
     <a href="contacts.html">Add contact</a>
+    <a href="mycontacts.html">Add contact</a>
 </body>
 </html>
