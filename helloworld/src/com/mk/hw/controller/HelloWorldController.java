@@ -14,6 +14,7 @@ public class HelloWorldController
 	public ModelAndView hellowWorld()
 	{
 		String message = "Hello World, Spring 3.0!";
+		System.out.println("Hello World");
 		return new ModelAndView(viewName, key, message);
 	}
 }
