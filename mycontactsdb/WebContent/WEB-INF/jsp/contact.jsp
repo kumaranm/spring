@@ -63,6 +63,6 @@
 			</c:forEach>
 		</table>
 	</c:if>
-
+	<a href="index.jsp">Back</a>
 </body>
 </html>
